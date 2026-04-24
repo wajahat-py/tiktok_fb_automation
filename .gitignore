@@ -16,8 +16,5 @@ __pycache__/
 
 # Old dev artifacts
 downloads/
-main.py
-requirements.txt
-Dockerfile
 
 .claude

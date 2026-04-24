@@ -28,7 +28,7 @@ Automatically pulls the 2 oldest unposted TikTok videos from a profile and prepa
 
 ```bash
 git clone <your-repo-url>
-cd tiktok_fb_api
+cd tiktok_fb_automation
 ```
 
 ### 2. Start the containers
