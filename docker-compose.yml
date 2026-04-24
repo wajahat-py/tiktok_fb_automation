@@ -1,0 +1,25 @@
+services:
+  api:
+    build: ./api
+    container_name: tiktok_fb_api
+    ports:
+      - "8000:8000"
+    environment:
+      - DOWNLOAD_DIR=/shared/downloads
+    volumes:
+      - ./shared:/shared
+    restart: unless-stopped
+
+  n8n:
+    image: n8nio/n8n
+    container_name: tiktok_fb_n8n
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_RESTRICT_FILE_ACCESS_TO=/shared
+    volumes:
+      - ./n8n_data:/home/node/.n8n
+      - ./shared:/shared
+    depends_on:
+      - api
+    restart: unless-stopped

@@ -1,0 +1,23 @@
+# n8n internal data — persists locally, never commit
+n8n_data/*
+!n8n_data/.gitkeep
+
+# Downloaded videos and upload state — generated at runtime
+shared/*
+!shared/.gitkeep
+!shared/downloads/.gitkeep
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Old dev artifacts
+downloads/
+main.py
+requirements.txt
+Dockerfile
+
+.claude
